@@ -1,1 +1,1 @@
-# AlgorithmEx modify something
+# AlgorithmEx modify something for algirithm exercise
