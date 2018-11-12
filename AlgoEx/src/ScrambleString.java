@@ -67,10 +67,10 @@ public class ScrambleString {
             if(count[i] != 0)return false;
         }
         for (int i = 1; i < len; i++) {
-            if(isScramble(s1.substring(0,i), s2.substring(0,i)) && isScramble(s1.substring(i), s2.substring(i))){
+            if(isScramble2(s1.substring(0,i), s2.substring(0,i)) && isScramble2(s1.substring(i), s2.substring(i))){
                 return true;
             }
-            if(isScramble(s1.substring(0,i), s2.substring(len-i)) && isScramble(s1.substring(i), s2.substring(0,len-i))){
+            if(isScramble2(s1.substring(0,i), s2.substring(len-i)) && isScramble2(s1.substring(i), s2.substring(0,len-i))){
                 return true;
             }
         }
@@ -87,11 +87,11 @@ public class ScrambleString {
             return true;
         }
         for (int i = 1; i < len; i++) {
-            if(isScramble(s1.substring(0,i), s2.substring(0,i)) && isScramble(s1.substring(i), s2.substring(i))){
+            if(isScramble1(s1.substring(0,i), s2.substring(0,i)) && isScramble1(s1.substring(i), s2.substring(i))){
                 map.put(s1+s2, true);
                 return true;
             }
-            if(isScramble(s1.substring(0,i), s2.substring(len-i)) && isScramble(s1.substring(i), s2.substring(0,len-i))){
+            if(isScramble1(s1.substring(0,i), s2.substring(len-i)) && isScramble1(s1.substring(i), s2.substring(0,len-i))){
                 map.put(s1+s2, true);
                 return true;
             }

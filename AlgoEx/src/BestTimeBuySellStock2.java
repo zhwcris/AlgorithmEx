@@ -1,4 +1,4 @@
-public class BestTimeSell {
+public class BestTimeBuySellStock2 {
     public int maxProfit(int[] prices) {
         int total = 0;
         int minus = 0;
