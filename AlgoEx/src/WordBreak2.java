@@ -10,23 +10,51 @@ import java.util.List;
 public class WordBreak2 {
     public List<String> wordBreak(String s, List<String> wordDict) {
         List<String> res = new ArrayList<>();
-        String[] mem = new String[s.length()];
-        dfs(s, wordDict, 0, res, "", 0, mem);
+        boolean[] mem = new boolean[s.length()];
+        dfs(s, wordDict, 0, res, mem, "");
         return res;
     }
 
-    private void dfs(String s, List<String> wordDict, int index, List<String> res, String sequence, int last, String[] mem){
+    private List<String> dfs(){
+        return null;
+    }
+    private boolean dfs(String s, List<String> wordDict, int index, List<String> res, boolean[] mem, String sequence){//dfs with return bool : if can be breakable
         if(index == s.length()){
-            res.add(sequence.substring(0, sequence.length()-1));
-            mem[last] = true;
+            res.add(sequence.substring(1));
+            return true;
         }
+        boolean possible = false;
         for (int i = index; i < s.length(); i++) {
             String tmp = s.substring(index,i+1);
             if(wordDict.contains(tmp)){
-                sequence += tmp + " ";
-                dfs(s, wordDict, i + 1, res, sequence, index, mem);
-                sequence = sequence.substring(0, sequence.length() - tmp.length() - 1);
+                if(mem[index]){
+                    continue;
+                }
+                String tmpSeq = sequence + " " + tmp;
+                boolean flag = dfs(s, wordDict, i + 1, res, mem, tmpSeq);
+                possible = flag || possible;
             }
         }
+        mem[index] = !possible;
+        return possible;
+    }
+
+    private boolean dfs2(String s, List<String> wordDict, int index, List<String> res, boolean[] mem, String sequence){//dfs2 with return bool
+        if(index == s.length()){
+            res.add(sequence.substring(1));
+            return true;
+        }
+        if(mem[index] == true)return false;
+        boolean possible = false;
+        for (int i = index; i < s.length(); i++) {
+            String tmp = s.substring(index,i+1);
+            if(wordDict.contains(tmp)){
+                String tmpSeq = sequence + " " + tmp;
+                boolean flag = dfs(s, wordDict, i + 1, res, mem, tmpSeq);
+                possible = flag || possible;
+            }
+        }
+        mem[index] = !possible;
+        return possible;
     }
 }
