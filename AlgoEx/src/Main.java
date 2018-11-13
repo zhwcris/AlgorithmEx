@@ -50,8 +50,7 @@ public class Main {
         T pp = (T) o;
 
         Main main = new Main();
-        main.test1();
-    }
+        main.test1();    }
 
     private static int binarySearch(List<Integer> list, int t){
         int low = 0, high = list.size() - 1, mid;
