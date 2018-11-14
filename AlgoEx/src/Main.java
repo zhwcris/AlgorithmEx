@@ -9,18 +9,18 @@ public class Main {
 
     public static void main(String[] args) throws SocketTimeoutException {
         int[] test = {1};
-        int[][] test1 = {{3, 0, 1, 4, 2},{5, 6, 3, 2, 1},{1, 2, 0, 1, 5},{4, 1, 0, 1, 7},{1, 0, 3, 0, 5}};
+        int[][] test1 = {{1,3},{3,5},{6,7},{6,8},{8,4},{9,5}};
         int[] test2 = {1,10,4,11};
         char[] test3 = {'A','A','A','A','A','A','B','C','D','E','F','G'};
         char[][] test4 = {{'1','0','1','0','0'},{'1','0','1','1','1'},{'1','1','1','1','1'},{'1','0','0','1','0'}};
         Interval[] intervals = {new Interval(2,6),new Interval(1,3),new Interval(8,10),new Interval(15,18)};
         Interval[] intervals1 = {new Interval(1,4),new Interval(2,3)};
-        String s = "catsanddog";
+        String s = "aaaaaaaa";
         String s1 = "ahbgdc";
         String s2 = "aabdbadc";
         String t = 12 + "-" + 1;
         s2.substring(0,0);
-        String[] words = {"cat", "cats", "and", "sand", "dog"};
+        String[] words = {"aaaa","aaa","aa"};
         List<String> wordDict = Arrays.asList(words);
         System.out.println("Integer max " + (Integer.MAX_VALUE + 1));
         Stack<Integer> tt = new Stack<>();
@@ -30,13 +30,15 @@ public class Main {
         taskF.offer(1);
         Queue<Integer> queue = new LinkedList<>();
 
-        WordBreak2 wordBreak2 = new WordBreak2();
-        wordBreak2.wordBreak(s, wordDict);
+        RussianDollEnvelopes russianDollEnvelopes = new RussianDollEnvelopes();
+        russianDollEnvelopes.maxEnvelopes(test1);
 
-        List list = Arrays.asList(test);
-
-        int res = binarySearch(list, 8);
-
+        Arrays.sort(test1, new Comparator<int[]>() {
+            @Override
+            public int compare(int[] o1, int[] o2) {
+                return o1[0] - o2[0];
+            }
+        });
         double b = 3.72529e-9;
         System.out.println(~1);
         System.out.println(">>> :" + (-4 >> 1));
