@@ -8,7 +8,7 @@ import java.util.stream.IntStream;
 public class Main {
 
     public static void main(String[] args) throws SocketTimeoutException {
-        int[] test = {1};
+        int[] test = {1, 5, 11, 5};
         int[][] test1 = {{1,0,1},{0,-2,3}};
         int[] test2 = {1,10,4,11};
         char[] test3 = {'A','A','A','A','A','A','B','C','D','E','F','G'};
@@ -30,8 +30,8 @@ public class Main {
         taskF.offer(1);
         Queue<Integer> queue = new LinkedList<>();
 
-        MaxSumRectangleNoLargerThanK maxSumRectangleNoLargerThanK = new MaxSumRectangleNoLargerThanK();
-        maxSumRectangleNoLargerThanK.maxSumSubmatrix(test1, 2);
+        PartitionEqualSubsetSum partitionEqualSubsetSum = new PartitionEqualSubsetSum();
+        partitionEqualSubsetSum.canPartition(test);
 
         Arrays.sort(test1, new Comparator<int[]>() {
             @Override

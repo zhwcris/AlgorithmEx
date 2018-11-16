@@ -8,7 +8,7 @@ import java.util.Arrays;
  */
 public class PerfectSquares {
 
-    public int numSquares(int n) {
+    public int numSquares(int n) {//bfs solution
         int a = (int) Math.sqrt(n);
         if(a * a == n)return 1;
         ArrayDeque<Integer> arrayDeque = new ArrayDeque<>();
