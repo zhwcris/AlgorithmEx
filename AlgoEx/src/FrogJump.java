@@ -2,7 +2,6 @@ import java.util.ArrayDeque;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
-
 /**
  * Created with IntelliJ IDEA.
  * User: zhanghongwei
@@ -70,5 +69,18 @@ public class FrogJump {
         return false;
     }
 
+    private boolean dfs(HashSet<Integer> set, int steps, int now, int last){//可以加入memo，hashset记录第i个石头多少jump是否成功的结果
+        if(now == last)return true;
 
+        if(set.contains(now + steps + 1) && dfs(set, steps + 1, now + steps + 1, last)){
+            return true;
+        }
+        if(steps > 1 && set.contains(now + steps - 1) && dfs(set, steps - 1, now + steps - 1, last)){
+            return true;
+        }
+        if(set.contains(now + steps) && dfs(set, steps, now + steps, last)){
+            return true;
+        }
+        return false;
+    }
 }
