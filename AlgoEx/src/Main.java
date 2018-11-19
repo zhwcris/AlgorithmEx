@@ -8,15 +8,15 @@ import java.util.stream.IntStream;
 public class Main {
 
     public static void main(String[] args) throws SocketTimeoutException {
-        int[] test = {7,2,5,10,8};
+        int[] test = {1, 5, 11, 5};
         int[][] test1 = {{1,0,1},{0,-2,3}};
         int[] test2 = {1,10,4,11};
         char[] test3 = {'A','A','A','A','A','A','B','C','D','E','F','G'};
         char[][] test4 = {{'1','0','1','0','0'},{'1','0','1','1','1'},{'1','1','1','1','1'},{'1','0','0','1','0'}};
         Interval[] intervals = {new Interval(2,6),new Interval(1,3),new Interval(8,10),new Interval(15,18)};
         Interval[] intervals1 = {new Interval(1,4),new Interval(2,3)};
-        String s = "aaaaaaaa";
-        String s1 = "ahbgdc";
+        String s = "";
+        String s1 = "*";
         String s2 = "aabdbadc";
         String t = 12 + "-" + 1;
         s2.substring(0,0);
@@ -30,8 +30,8 @@ public class Main {
         taskF.offer(1);
         Queue<Integer> queue = new LinkedList<>();
 
-        SplitArrayLargestSum splitArrayLargestSum = new SplitArrayLargestSum();
-        splitArrayLargestSum.splitArray(test, 2);
+        WildcardMatching wildcardMatching = new WildcardMatching();
+        wildcardMatching.isMatch(s, s1);
 
         Arrays.sort(test1, new Comparator<int[]>() {
             @Override
