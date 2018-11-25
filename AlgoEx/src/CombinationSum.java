@@ -8,6 +8,10 @@ import java.util.List;
  * User: zhanghongwei
  * Date: 2018/6/27
  */
+
+/**非常好的关于回溯算法的一个总结
+ * https://leetcode.com/problems/combination-sum/discuss/16502/A-general-approach-to-backtracking-questions-in-Java-(Subsets-Permutations-Combination-Sum-Palindrome-Partitioning)
+ */
 public class CombinationSum {
     public List<List<Integer>> combinationSum(int[] candidates, int target) {
         List<List<Integer>> result = new ArrayList<>();

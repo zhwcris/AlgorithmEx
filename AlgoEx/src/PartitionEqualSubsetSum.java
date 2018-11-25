@@ -16,7 +16,7 @@ public class PartitionEqualSubsetSum {
         sum /= 2;
         boolean[] dp = new boolean[sum+1];
         dp[0] = true;
-        for (int i = 0; i < nums.length; i++) {//和PerfectSquares CoinChange WordBreak CombinationSumIV的方法很详细， 这里注意里面的循环的遍历顺序，因为有1并且num[i]使用次数有限，要从后往前遍历
+        for (int i = 0; i < nums.length; i++) {//和targetsum PerfectSquares CoinChange WordBreak CombinationSumIV  OnesAndZeros 的方法很详细， 这里注意里面的循环的遍历顺序，因为有1并且num[i]使用次数有限，要从后往前遍历
             //https://www.cnblogs.com/fengziwei/p/7750849.html   这里有详细解释为何  “倒过来”  遍历
 //            for (int j = 1; j <= sum; j++) {
 //                if(nums[i] <= j){

@@ -8,19 +8,21 @@ import java.util.stream.IntStream;
 public class Main {
 
     public static void main(String[] args) throws SocketTimeoutException {
-        int[] test = {1,2,3,8,9,10};
+        int[] test = {1,1,1,1,1};
         int[][] test1 = {{1,0,1},{0,-2,3}};
         int[] test2 = {1,10,4,11};
         char[] test3 = {'A','A','A','A','A','A','B','C','D','E','F','G'};
         char[][] test4 = {{'1','0','1','0','0'},{'1','0','1','1','1'},{'1','1','1','1','1'},{'1','0','0','1','0'}};
         Interval[] intervals = {new Interval(2,6),new Interval(1,3),new Interval(8,10),new Interval(15,18)};
         Interval[] intervals1 = {new Interval(1,4),new Interval(2,3)};
-        String s = "aa";
+        String s = "a";
         String s1 = "a";
         String s2 = "aabdbadc";
         String t = 12 + "-" + 1;
         s2.substring(0,0);
-        String[] words = {"aaaa","aaa","aa"};
+        String[] words = {"cat","cats","catsdogcats","dog","dogcatsdog","hippopotamuses","rat","ratcatdogcat"};
+        int b1 = 1, b2 = 2;
+        int bit = b1 << 2;
         List<String> wordDict = Arrays.asList(words);
         System.out.println("Integer max " + (Integer.MAX_VALUE + 1));
         Stack<Integer> tt = new Stack<>();
@@ -30,8 +32,8 @@ public class Main {
         taskF.offer(1);
         Queue<Integer> queue = new LinkedList<>();
 
-        ArithmeticSlices arithmeticSlices = new ArithmeticSlices();
-        arithmeticSlices.numberOfArithmeticSlices(test);
+        TargetSum targetSum = new TargetSum();
+        targetSum.findTargetSumWays(test,3);
 
         Arrays.sort(test1, new Comparator<int[]>() {
             @Override
