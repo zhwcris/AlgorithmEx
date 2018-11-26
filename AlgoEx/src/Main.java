@@ -8,7 +8,7 @@ import java.util.stream.IntStream;
 public class Main {
 
     public static void main(String[] args) throws SocketTimeoutException {
-        int[] test = {1,1,1,1,1};
+        int[] test = {1,4,3};
         int[][] test1 = {{1,0,1},{0,-2,3}};
         int[] test2 = {1,10,4,11};
         char[] test3 = {'A','A','A','A','A','A','B','C','D','E','F','G'};
@@ -31,9 +31,10 @@ public class Main {
         taskF.offer(2);
         taskF.offer(1);
         Queue<Integer> queue = new LinkedList<>();
+        boolean b = true;
 
-        TargetSum targetSum = new TargetSum();
-        targetSum.findTargetSumWays(test,3);
+        PredictTheWinner predictTheWinner = new PredictTheWinner();
+        predictTheWinner.PredictTheWinner(test);
 
         Arrays.sort(test1, new Comparator<int[]>() {
             @Override
