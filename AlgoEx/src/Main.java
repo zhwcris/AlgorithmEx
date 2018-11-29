@@ -24,6 +24,7 @@ public class Main {
         int b1 = 1, b2 = 2;
         int bit = b1 << 2;
         List<String> wordDict = Arrays.asList(words);
+        wordDict.set(0, "ssss");
         System.out.println("Integer max " + (Integer.MAX_VALUE + 1));
         Stack<Integer> tt = new Stack<>();
         tt.toArray(new Integer[2]);
@@ -33,8 +34,8 @@ public class Main {
         Queue<Integer> queue = new LinkedList<>();
         boolean b = true;
 
-        PredictTheWinner predictTheWinner = new PredictTheWinner();
-        predictTheWinner.PredictTheWinner(test);
+        OutOfBoundaryPaths outOfBoundaryPaths = new OutOfBoundaryPaths();
+        outOfBoundaryPaths.findPaths(1,3,3,0,1);
 
         Arrays.sort(test1, new Comparator<int[]>() {
             @Override
