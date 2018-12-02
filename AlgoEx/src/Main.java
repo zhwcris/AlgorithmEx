@@ -15,8 +15,8 @@ public class Main {
         char[][] test4 = {{'1','0','1','0','0'},{'1','0','1','1','1'},{'1','1','1','1','1'},{'1','0','0','1','0'}};
         Interval[] intervals = {new Interval(2,6),new Interval(1,3),new Interval(8,10),new Interval(15,18)};
         Interval[] intervals1 = {new Interval(1,4),new Interval(2,3)};
-        String s = "aba";
-        String s1 = "a";
+        String s = "delete";
+        String s1 = "leet";
         String s2 = "aabdbadc";
         String t = 12 + "-" + 1;
         s2.substring(0,0);
@@ -34,8 +34,8 @@ public class Main {
         Queue<Integer> queue = new LinkedList<>();
         boolean b = true;
 
-        PartitionToKEqualSumSubsets partitionToKEqualSumSubsets = new PartitionToKEqualSumSubsets();
-        boolean res = partitionToKEqualSumSubsets.canPartitionKSubsets(test, 3);
+        KnightProbabilityInChessboard knightProbabilityInChessboard = new KnightProbabilityInChessboard();
+        double res = knightProbabilityInChessboard.knightProbability(3,2,0,0);
 
         Arrays.sort(test1, new Comparator<int[]>() {
             @Override
