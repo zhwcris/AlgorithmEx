@@ -8,14 +8,14 @@ import java.util.stream.IntStream;
 public class Main {
 
     public static void main(String[] args) throws SocketTimeoutException {
-        int[] test = {1,576,1,1};
+        int[] test = {2,2,10,5,2,7,2,2,13};
         int[][] test1 = {{1,0,1},{0,-2,3}};
         int[] test2 = {1,10,4,11};
         char[] test3 = {'A','A','A','A','A','A','B','C','D','E','F','G'};
         char[][] test4 = {{'1','0','1','0','0'},{'1','0','1','1','1'},{'1','1','1','1','1'},{'1','0','0','1','0'}};
         Interval[] intervals = {new Interval(2,6),new Interval(1,3),new Interval(8,10),new Interval(15,18)};
         Interval[] intervals1 = {new Interval(1,4),new Interval(2,3)};
-        String s = "a";
+        String s = "aba";
         String s1 = "a";
         String s2 = "aabdbadc";
         String t = 12 + "-" + 1;
@@ -34,8 +34,8 @@ public class Main {
         Queue<Integer> queue = new LinkedList<>();
         boolean b = true;
 
-        OutOfBoundaryPaths outOfBoundaryPaths = new OutOfBoundaryPaths();
-        outOfBoundaryPaths.findPaths(1,3,3,0,1);
+        PartitionToKEqualSumSubsets partitionToKEqualSumSubsets = new PartitionToKEqualSumSubsets();
+        boolean res = partitionToKEqualSumSubsets.canPartitionKSubsets(test, 3);
 
         Arrays.sort(test1, new Comparator<int[]>() {
             @Override

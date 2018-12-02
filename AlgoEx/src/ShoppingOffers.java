@@ -1,39 +1,59 @@
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 
 public class ShoppingOffers {
-    public int shoppingOffers(List<Integer> price, List<List<Integer>> special, List<Integer> needs) {
-
-        return 0;
+    private static class Tuple {
+        int code;
+        int p;
+        int sIndex;
+        private Tuple(int code, int p, int sIndex) {
+            this.code = code;
+            this.p = p;
+            this.sIndex = sIndex;
+        }
     }
 
-    private int dfs(List<Integer> price, List<List<Integer>> special, List<Integer> needs){
-        Iterator<List<Integer>> iterator = special.iterator();
-        while (iterator.hasNext()){
-            List<Integer> list = iterator.next();
-            int max = getMaxNumOffer(list, needs);
-            if(max != 0){
-                List<Integer> copy = new ArrayList<>();
-                for (int i = 0; i < needs.size(); i++) {
-                    copy.set(i, (needs.get(i) - list.get(i) * max));
+    public int shoppingOffers(List<Integer> price, List<List<Integer>> special, List<Integer> needs) {//bfs nice
+        int ret = Integer.MAX_VALUE;
+        int n = price.size();
+        int p = 0;
+        int code = 0;
+        for (int i = 0; i < n; i++) {
+            p += price.get(i)*needs.get(i);
+            code ^= (needs.get(i)<<(i*4));
+        }
+        Queue<Tuple> q = new LinkedList<Tuple>();
+        q.offer(new Tuple(code, p, 0));
+        while (!q.isEmpty()) {
+            Tuple t = q.poll();
+            ret = Math.min(ret, t.p);
+            for (int i = t.sIndex; i < special.size(); i++) {
+                List<Integer> offer = special.get(i);
+                Tuple nextT = getTupleIfValid(t, offer, price, i);
+                if (nextT != null) {
+                    q.offer(nextT);
                 }
-                dfs(price, special, copy);
             }
-            iterator.remove();
         }
-        return 0;
+        return ret;
     }
 
-    private int getMaxNumOffer(List<Integer> special, List<Integer> needs){
-        int max = Integer.MAX_VALUE;
-        if(special.size() == 0)return 0;
-        for (int i = 0; i < needs.size(); i++) {
-            if(special.get(i) == 0)continue;
-            max = Math.min(max, needs.get(i)/special.get(i));
+    private Tuple getTupleIfValid(Tuple t, List<Integer> offer, List<Integer> price, int sIndex) {
+        int newCode = 0;
+        int code = t.code;
+        int p = t.p;
+        for (int i = 0; i < price.size(); i++) {
+            int count = (code>>>(i*4))&0XF;
+            if (offer.get(i) > 0) {
+                if (count >= offer.get(i)) {
+                    count -= offer.get(i);
+                    p -= price.get(i)*offer.get(i);
+                } else {
+                    return null;
+                }
+            }
+            newCode ^= (count << (4*i));
         }
-        if(max == Integer.MAX_VALUE)return 0;
-        return max;
+        p += offer.get(offer.size()-1);
+        return new Tuple(newCode, p, sIndex);
     }
 }
