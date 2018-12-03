@@ -5,10 +5,7 @@
  */
 public class PredictTheWinner {
     public boolean PredictTheWinner(int[] nums) {
-        if(nums.length <= 1){
-            return true;
-        }
-        boolean res = canWin(nums, 0, nums.length-1, 0, 0);
+        boolean res = dfs(nums, 0, nums.length - 1) >= 0;
         return res;
     }
 
@@ -72,5 +69,26 @@ public class PredictTheWinner {
         }else {
             return !dfs1(nums, start+1, end, !b, s1, s2+nums[start]) || !dfs1(nums, start, end-1, !b, s1, s2+nums[end]);
         }
+    }
+
+    private int dfs(int[] nums, int start, int end){//表示比上一个选过的玩家多出的分数   without memo,   可以增加int[][] memo提升效率
+        if(start == end){
+            return nums[start];
+        }
+        return Math.max(nums[start] - dfs(nums, start+1, end), nums[end] - dfs(nums, start, end-1));
+    }
+
+    public boolean PredictTheWinner11(int[] nums) {//dp amazing solution The dp[i][j] saves how much more scores that the first-in-action player will get from i to j than the second player.
+        // First-in-action means whomever moves first.
+        int n = nums.length;
+        int[][] dp = new int[n][n];
+        for (int i = 0; i < n; i++) { dp[i][i] = nums[i]; }
+        for (int len = 1; len < n; len++) {
+            for (int i = 0; i < n - len; i++) {
+                int j = i + len;
+                dp[i][j] = Math.max(nums[i] - dp[i + 1][j], nums[j] - dp[i][j - 1]);
+            }
+        }
+        return dp[0][n - 1] >= 0;
     }
 }
