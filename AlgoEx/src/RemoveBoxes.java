@@ -3,7 +3,7 @@
  * User: zhanghongwei
  * Date: 2018/12/4
  */
-public class RemoveBoxes {
+public class RemoveBoxes {// similar with strange printer
     public int removeBoxes(int[] boxes) {
         int n = boxes.length;
         int[][][] dp = new int[n][n][n];
