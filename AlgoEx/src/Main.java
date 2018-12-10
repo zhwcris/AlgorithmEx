@@ -36,7 +36,6 @@ public class Main {
 
         DecodeWaysII decodeWaysII = new DecodeWaysII();
         decodeWaysII.numDecodings(s);
-
         Arrays.sort(test1, new Comparator<int[]>() {
             @Override
             public int compare(int[] o1, int[] o2) {
