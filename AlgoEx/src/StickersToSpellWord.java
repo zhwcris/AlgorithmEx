@@ -7,7 +7,82 @@ import java.util.HashMap;
  * Date: 2018/12/11
  */
 public class StickersToSpellWord {
-    public int minStickers(String[] stickers, String target) {
+
+    public int minStickers(String[] stickers, String target) {//迭代的版本 用二进制代表target状态，值得学习
+        int n = target.length(), m = 1 << n; // if target has n chars, there will be m=2^n-1 subset of characters in target
+        int[] dp = new int[m];
+        for (int i = 0; i < m; i++) dp[i] = Integer.MAX_VALUE; // use index 0 - 2^n-1 as bitmaps to represent each subset of all chars in target
+        dp[0] = 0; // first thing we know is : dp[empty set] requires 0 stickers,
+        for (int i = 0; i < m; i++) { // for every subset i, start from 000...000
+            if (dp[i] == Integer.MAX_VALUE) continue;
+            for (String s : stickers) { // try use each sticker as an char provider to populate 1 of its superset, to do that:
+                int sup = i;
+                for (char c : s.toCharArray()) { // for each char in the sticker, try apply it on a missing char in the subset of target
+                    for (int r = 0; r < n; r++) {
+                        if (target.charAt(r) == c && ((sup >> r) & 1) == 0) {
+                            sup |= 1 << r;
+                            break;
+                        }
+                    }
+                }
+                // after you apply all possible chars in a sticker, you get an superset that take 1 extra sticker than subset
+                // would take, so you can try to update the superset's minsticker number with dp[sub]+1;
+                dp[sup] = Math.min(dp[sup], dp[i] + 1);
+            }
+        }
+        return dp[m - 1] != Integer.MAX_VALUE ? dp[m - 1] : -1;
+    }
+
+    public int minStickers11(String[] stickers, String target) {//dfs version 用0 - 2^n-1记录target中字符被cover的状态，牛BBBB
+        int N = target.length();
+        Integer[] dp = new Integer[1<<N];
+
+        return searchHelper(stickers,dp,target,0);
+    }
+
+    public int searchHelper(String[] stickers,Integer[] dp,String target,int state){
+        if(dp[state]!=null){
+            return dp[state];
+        }
+
+        int N=target.length();
+        if(state==((1<<N)-1)){
+            return 0;
+        }
+
+        int minCount= Integer.MAX_VALUE;
+        int originalstate = state;
+        for(String str:stickers){
+            char[] array = str.toCharArray();
+
+            for(char c:array){
+                for(int i=0;i<target.length();i++){
+                    if(c==target.charAt(i) && ((state>>(target.length()-1-i))&1)==0){
+                        state |= 1<<(target.length()-1-i);
+                        break;
+                    }
+                }
+            }
+            if(state!=originalstate){
+                int count = searchHelper(stickers,dp,target,state);
+                if(count!=-1){
+                    minCount = Math.min(minCount,1+count);
+                }
+            }
+
+            state = originalstate;
+        }
+
+        if(minCount!=Integer.MAX_VALUE){
+            dp[state]=minCount;
+            return dp[state];
+        }
+        dp[state]=-1;
+        return -1;
+    }
+
+
+    public int minStickers1(String[] stickers, String target) {
         int[] count = new int[26];
         HashMap<String, Integer> dp = new HashMap<>();
         for (int i = 0; i < target.length(); i++) {
