@@ -8,23 +8,23 @@ import java.util.stream.IntStream;
 public class Main {
 
     public static void main(String[] args) throws SocketTimeoutException {
-        int[] test = {1,0,5};
+        int[] test = {1,0,2};
         int[][] test1 = {{1,0,1},{0,-2,3}};
         int[] test2 = {1,10,4,11};
         char[] test3 = {'A','A','A','A','A','A','B','C','D','E','F','G'};
         char[][] test4 = {{'1','0','1','0','0'},{'1','0','1','1','1'},{'1','1','1','1','1'},{'1','0','0','1','0'}};
         Interval[] intervals = {new Interval(2,6),new Interval(1,3),new Interval(8,10),new Interval(15,18)};
         Interval[] intervals1 = {new Interval(1,4),new Interval(2,3)};
-        String s = "*1*1*0";
+        String s = "stoodcrease";
         String s1 = "leet";
         String s2 = "aabdbadc";
         String t = 12 + "-" + 1;
         s2.substring(0,0);
-        String[] words = {"cat","cats","catsdogcats","dog","dogcatsdog","hippopotamuses","rat","ratcatdogcat"};
+        String[] words = {"control","heart","interest","stream","sentence","soil","wonder","them","month","slip","table","miss","boat","speak","figure","no","perhaps","twenty","throw","rich","capital","save","method","store","meant","life","oil","string","song","food","am","who","fat","if","put","path","come","grow","box","great","word","object","stead","common","fresh","the","operate","where","road","mean"};
         int b1 = 1, b2 = 2;
         int bit = b1 << 2;
         List<String> wordDict = Arrays.asList(words);
-        wordDict.set(0, "ssss");
+        //wordDict.set(0, "ssss");
         System.out.println("Integer max " + (Integer.MAX_VALUE + 1));
         Stack<Integer> tt = new Stack<>();
         tt.toArray(new Integer[2]);
@@ -32,16 +32,27 @@ public class Main {
         taskF.offer(2);
         taskF.offer(1);
         Queue<Integer> queue = new LinkedList<>();
-        boolean b = true;
+        boolean b = false;
 
-        DecodeWaysII decodeWaysII = new DecodeWaysII();
-        decodeWaysII.numDecodings(s);
+        StickersToSpellWord stickersToSpellWord = new StickersToSpellWord();
+        stickersToSpellWord.minStickers(words, s);
+
+        String stt = transferHash(test);
+        b = s.contains("0");
         Arrays.sort(test1, new Comparator<int[]>() {
             @Override
             public int compare(int[] o1, int[] o2) {
                 return o1[0] - o2[0];
             }
         });
+    }
+
+    private static String transferHash(int[] count){
+        StringBuilder s = new StringBuilder();
+        for (int i = 0; i < count.length; i++) {
+            s.append((char)(i + 'a')).append(count[i]);
+        }
+        return s.toString();
     }
 
     private static int binarySearch(List<Integer> list, int t){
