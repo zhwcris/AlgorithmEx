@@ -9,13 +9,13 @@ public class Main {
 
     public static void main(String[] args) throws SocketTimeoutException {
         int[] test = {1,0,2};
-        int[][] test1 = {{1,0,1},{0,-2,3}};
+        int[][] test1 = {{1,1,1,1,0,0,0},{0,0,0,1,0,0,0},{0,0,0,1,0,0,1},{1,0,0,1,0,0,0},{0,0,0,1,0,0,0},{0,0,0,1,0,0,0},{0,0,0,1,1,1,1}};
         int[] test2 = {1,10,4,11};
         char[] test3 = {'A','A','A','A','A','A','B','C','D','E','F','G'};
         char[][] test4 = {{'1','0','1','0','0'},{'1','0','1','1','1'},{'1','1','1','1','1'},{'1','0','0','1','0'}};
         Interval[] intervals = {new Interval(2,6),new Interval(1,3),new Interval(8,10),new Interval(15,18)};
         Interval[] intervals1 = {new Interval(1,4),new Interval(2,3)};
-        String s = "stoodcrease";
+        String s = "abcdabcdabcdabcdabcdabcdabcdabcddcbadcbadcbadcbadcbadcbadcbadcba";
         String s1 = "leet";
         String s2 = "aabdbadc";
         String t = 12 + "-" + 1;
@@ -34,8 +34,8 @@ public class Main {
         Queue<Integer> queue = new LinkedList<>();
         boolean b = false;
 
-        StickersToSpellWord stickersToSpellWord = new StickersToSpellWord();
-        stickersToSpellWord.minStickers(words, s);
+        CherryPickup cherryPickup = new CherryPickup();
+        cherryPickup.cherryPickup(test1);
 
         String stt = transferHash(test);
         b = s.contains("0");
