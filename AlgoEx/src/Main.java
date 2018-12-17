@@ -15,7 +15,7 @@ public class Main {
         char[][] test4 = {{'1','0','1','0','0'},{'1','0','1','1','1'},{'1','1','1','1','1'},{'1','0','0','1','0'}};
         Interval[] intervals = {new Interval(2,6),new Interval(1,3),new Interval(8,10),new Interval(15,18)};
         Interval[] intervals1 = {new Interval(1,4),new Interval(2,3)};
-        String s = "abcdabcdabcdabcdabcdabcdabcdabcddcbadcbadcbadcbadcbadcbadcbadcba";
+        String s = "babad";
         String s1 = "leet";
         String s2 = "aabdbadc";
         String t = 12 + "-" + 1;
@@ -34,8 +34,8 @@ public class Main {
         Queue<Integer> queue = new LinkedList<>();
         boolean b = false;
 
-        CherryPickup cherryPickup = new CherryPickup();
-        cherryPickup.cherryPickup(test1);
+        LongestPalindromicSubstring longestPalindromicSubstring = new LongestPalindromicSubstring();
+        String res = longestPalindromicSubstring.longestPalindrome(s);
 
         String stt = transferHash(test);
         b = s.contains("0");
