@@ -8,9 +8,9 @@ import java.util.stream.IntStream;
 public class Main {
 
     public static void main(String[] args) throws SocketTimeoutException {
-        int[] test = {1,0,2};
-        int[][] test1 = {{0,1,-1},{1,0,-1},{1,1,1}};
-        int[] test2 = {1,10,4,11};
+        int[] test = {0,4,4,5,9};
+        int[][] test1 = {{0,1,100},{1,2,100},{0,2,500}};
+        int[] test2 = {0,1,6,8,10};
         char[] test3 = {'A','A','A','A','A','A','B','C','D','E','F','G'};
         char[][] test4 = {{'1','0','1','0','0'},{'1','0','1','1','1'},{'1','1','1','1','1'},{'1','0','0','1','0'}};
         Interval[] intervals = {new Interval(2,6),new Interval(1,3),new Interval(8,10),new Interval(15,18)};
@@ -34,8 +34,8 @@ public class Main {
         Queue<Integer> queue = new LinkedList<>();
         boolean b = false;
 
-        LongestPalindromicSubstring longestPalindromicSubstring = new LongestPalindromicSubstring();
-        String res = longestPalindromicSubstring.longestPalindrome(s);
+        MinSwapsToMakeSequencesIncreasing minSwapsToMakeSequencesIncreasing = new MinSwapsToMakeSequencesIncreasing();
+        minSwapsToMakeSequencesIncreasing.minSwap(test, test2);
 
         String stt = transferHash(test);
         b = s.contains("0");
