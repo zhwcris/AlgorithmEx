@@ -8,7 +8,7 @@ import java.util.stream.IntStream;
 public class Main {
 
     public static void main(String[] args) throws SocketTimeoutException {
-        int[] test = {0,4,4,5,9};
+        int[] test = {1,2,3,4,5,6,7};
         int[][] test1 = {{0,1,100},{1,2,100},{0,2,500}};
         int[] test2 = {0,1,6,8,10};
         char[] test3 = {'A','A','A','A','A','A','B','C','D','E','F','G'};
@@ -34,8 +34,8 @@ public class Main {
         Queue<Integer> queue = new LinkedList<>();
         boolean b = false;
 
-        MinSwapsToMakeSequencesIncreasing minSwapsToMakeSequencesIncreasing = new MinSwapsToMakeSequencesIncreasing();
-        minSwapsToMakeSequencesIncreasing.minSwap(test, test2);
+        RaceCar raceCar = new RaceCar();
+        int res = raceCar.racecar(6);
 
         String stt = transferHash(test);
         b = s.contains("0");
