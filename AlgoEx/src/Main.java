@@ -1,13 +1,14 @@
 import com.sun.deploy.util.ArrayUtil;
 import org.omg.PortableInterceptor.SUCCESSFUL;
 
+import java.io.File;
 import java.net.SocketTimeoutException;
 import java.util.*;
 import java.util.stream.IntStream;
 
 public class Main {
 
-    public static void main(String[] args) throws SocketTimeoutException {
+    public static void main(String[] args) throws SocketTimeoutException, IllegalAccessException, InstantiationException {
         int[] test = {1,2,3,4,5,6,7};
         int[][] test1 = {{0,1,100},{1,2,100},{0,2,500}};
         int[] test2 = {0,1,6,8,10};
@@ -34,8 +35,8 @@ public class Main {
         Queue<Integer> queue = new LinkedList<>();
         boolean b = false;
 
-        RaceCar raceCar = new RaceCar();
-        int res = raceCar.racecar(6);
+        File f = new File(Main.class.getResource("/").getPath());
+        System.out.println(f);
 
         String stt = transferHash(test);
         b = s.contains("0");
