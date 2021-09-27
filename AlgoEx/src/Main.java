@@ -1,25 +1,27 @@
-import com.sun.deploy.util.ArrayUtil;
-import org.omg.PortableInterceptor.SUCCESSFUL;
+import tree.*;
+import tree.TreeNode;
 
 import java.io.File;
 import java.net.SocketTimeoutException;
 import java.util.*;
-import java.util.stream.IntStream;
 
 public class Main {
 
     public static void main(String[] args) throws SocketTimeoutException, IllegalAccessException, InstantiationException {
         int[] test = {1,2,3,4,5,6,7};
         int[][] test1 = {{0,1,100},{1,2,100},{0,2,500}};
-        int[] test2 = {0,1,6,8,10};
-        char[] test3 = {'A','A','A','A','A','A','B','C','D','E','F','G'};
-        char[][] test4 = {{'1','0','1','0','0'},{'1','0','1','1','1'},{'1','1','1','1','1'},{'1','0','0','1','0'}};
-        Interval[] intervals = {new Interval(2,6),new Interval(1,3),new Interval(8,10),new Interval(15,18)};
-        Interval[] intervals1 = {new Interval(1,4),new Interval(2,3)};
+        int shift = (5 - 1) >> 1;
         String s = "babad";
         String s1 = "leet";
         String s2 = "aabdbadc";
-        String t = 12 + "-" + 1;
+        TreeNode root = TreeNode.getTmpTree();
+        int[] preorder = {0,1,2,3,4,5};
+        int testI = Integer.parseInt("046");
+        Integer[] arrff = Arrays.stream(new String[] {"7","4","2","3","6","5","9","8","10"})
+                .map(Integer::parseInt)
+                .toArray(Integer[]::new);
+        FindDuplicateSubtrees_652 findDuplicateSubtrees_652 = new FindDuplicateSubtrees_652();
+        findDuplicateSubtrees_652.findDuplicateSubtrees(root);
         s2.substring(0,0);
         String[] words = {"control","heart","interest","stream","sentence","soil","wonder","them","month","slip","table","miss","boat","speak","figure","no","perhaps","twenty","throw","rich","capital","save","method","store","meant","life","oil","string","song","food","am","who","fat","if","put","path","come","grow","box","great","word","object","stead","common","fresh","the","operate","where","road","mean"};
         int b1 = 1, b2 = 2;

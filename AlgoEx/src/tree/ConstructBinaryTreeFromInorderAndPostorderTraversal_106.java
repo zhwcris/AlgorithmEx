@@ -1,3 +1,5 @@
+package tree;
+
 import java.util.HashMap;
 
 /**
@@ -5,7 +7,7 @@ import java.util.HashMap;
  * User: zhanghongwei
  * Date: 2018/4/27
  */
-public class ConstructTreeInPost {
+public class ConstructBinaryTreeFromInorderAndPostorderTraversal_106 {
     public TreeNode buildTree(int[] inorder, int[] postorder) {
         HashMap<Integer, Integer> locCache = new HashMap<>();
         for(int i = 0; i < inorder.length; i++){
