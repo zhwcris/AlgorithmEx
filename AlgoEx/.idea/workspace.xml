@@ -2,73 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7d6f1d0d-834d-4bee-bcd0-925ee9471261" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/tree/A_TagRecord" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tree/AddOneRowToTree_623.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tree/AverageOfLevelsInBinaryTree_637.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tree/BalancedBinaryTree_110.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tree/BinarySearchTreeIterator_173.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tree/BinaryTreeLevelOrderTraversalII_107.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tree/BinaryTreeLevelOrderTraversal_102.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tree/BinaryTreePaths_257.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tree/BinaryTreePostorderTraversal_145.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tree/BinaryTreePreorderTraversal_144.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tree/BinaryTreeRightSideView_199.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tree/BinaryTreeZigzagLevelOrderTraversal_103.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tree/ConstructStringFromBinaryTree_606.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tree/ConvertBSTToGreaterTree_538.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tree/ConvertSortedArrayToBinarySearchTree_108.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tree/ConvertSortedListToBinarySearchTree_109.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tree/CountCompleteTreeNodes_222.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tree/DeleteNodeInABST_450.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tree/DiameterOfBinaryTree_543.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tree/FindBottomLeftTreeValue_513.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tree/FindDuplicateSubtrees_652.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tree/FindLargestValueInEachTreeRow_515.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tree/FindModeInBinarySearchTree_501.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tree/FlattenBinaryTreeToLinkedList_114.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tree/FlattenNestedListIterator_341.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tree/HouseRobberIII_337.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tree/InvertBinaryTree_226.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tree/KthSmallestElementInBST_230.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tree/LowestCommonAncestorOfABinarySearchTree_235.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tree/LowestCommonAncestorOfABinaryTree_236.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tree/MaximumBinaryTree_654.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tree/MaximumDepthOfBinaryTree_104.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tree/MaximumDepthOfNaryTree_559.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tree/MaximumWidthOfBinaryTree_662.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tree/MergeTwoBinaryTrees_617.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tree/MinimumAbsoluteDifferenceInBST_536.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tree/MinimumDepthOfBinaryTree_111.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tree/MostFrequentSubtreeSum_508.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tree/NaryTreeLevelOrderTraversal_429.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tree/NaryTreePostorderTraversal_590.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tree/NaryTreePreorderTraversal_589.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tree/Node.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tree/PathSumIII_437.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tree/PathSumII_113.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tree/PathSum_112.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tree/PopulatingNextRightPointersInEachNodeII_117.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tree/PopulatingNextRightPointersInEachNode_116.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tree/RecoverBinarySearchTree_99.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tree/SameTree_100.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tree/SerializeAndDeserializeBST_449.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tree/SubtreeOfAnotherTree_572.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tree/SumOfLeftLeaves_404.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tree/SumRootToLeafNumbers_129.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tree/SymmetricTree_101.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tree/TreeNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tree/TwoSumIVInputIsABST_653.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tree/ValidateBinarySearchTree_98.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tree/VerifyPreorderSerializationOfABinaryTree_331.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tree/AllNodesDistanceKInBinaryTree_863.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tree/BinaryTreePruning_814.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tree/InsertIntoABinarySearchTree.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tree/KthLargestElementInAStream_703.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tree/LeafSimilarTrees_872.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tree/LongestUnivaluePath_687.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tree/MinimumDistanceBetweenBSTNodes_783.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tree/SearchInABinarySearchTree.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tree/SmallestSubtreeWithAllTheDeepestNodes_865.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tree/SumOfDistancesInTree_834.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tree/TrimABinarySearchTree_669.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AlgoEx/BestTimeSell.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/AlgoEx/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AlgoEx/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AlgoEx/MaxAreaIsland.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AlgoEx/MaxAreaIsland.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ConstructTreeInPost.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tree/ConstructBinaryTreeFromInorderAndPostorderTraversal_106.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ConstructTreePreIn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tree/ConstructBinaryTreeFromPreorderAndInorderTraversal_105.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/JumpGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dp/JumpGame_55.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MinimumNumberOfRefuelingStops.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MinimumNumberOfRefuelingStops.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tree/MinimumAbsoluteDifferenceInBST_536.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tree/MinimumAbsoluteDifferenceInBST_530.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

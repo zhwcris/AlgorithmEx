@@ -9,7 +9,6 @@ public class Main {
 
     public static void main(String[] args) throws SocketTimeoutException, IllegalAccessException, InstantiationException {
         int[] test = {1,2,3,4,5,6,7};
-        int[][] test1 = {{0,1,100},{1,2,100},{0,2,500}};
         int shift = (5 - 1) >> 1;
         String s = "babad";
         String s1 = "leet";
@@ -20,8 +19,9 @@ public class Main {
         Integer[] arrff = Arrays.stream(new String[] {"7","4","2","3","6","5","9","8","10"})
                 .map(Integer::parseInt)
                 .toArray(Integer[]::new);
-        FindDuplicateSubtrees_652 findDuplicateSubtrees_652 = new FindDuplicateSubtrees_652();
-        findDuplicateSubtrees_652.findDuplicateSubtrees(root);
+        int[][] test1 = {{0,1},{0,2},{2,3},{2,4},{2,5}};
+        SumOfDistancesInTree_834 sumOfDistancesInTree = new SumOfDistancesInTree_834();
+        sumOfDistancesInTree.sumOfDistancesInTree(6, test1);
         s2.substring(0,0);
         String[] words = {"control","heart","interest","stream","sentence","soil","wonder","them","month","slip","table","miss","boat","speak","figure","no","perhaps","twenty","throw","rich","capital","save","method","store","meant","life","oil","string","song","food","am","who","fat","if","put","path","come","grow","box","great","word","object","stead","common","fresh","the","operate","where","road","mean"};
         int b1 = 1, b2 = 2;
@@ -31,7 +31,7 @@ public class Main {
         System.out.println("Integer max " + (Integer.MAX_VALUE + 1));
         Stack<Integer> tt = new Stack<>();
         tt.toArray(new Integer[2]);
-        PriorityQueue<Integer> taskF = new PriorityQueue<>((a, b)-> b - a);
+        PriorityQueue<Integer> taskF = new PriorityQueue<>((a, b)-> a - b);
         taskF.offer(2);
         taskF.offer(1);
         Queue<Integer> queue = new LinkedList<>();

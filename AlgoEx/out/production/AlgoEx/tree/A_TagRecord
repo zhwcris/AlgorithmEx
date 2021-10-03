@@ -1,0 +1,1 @@
+[level,list] //使用dfs，list每个元素代表一层，list.size == level，标识到达最新深度，需要list.add
